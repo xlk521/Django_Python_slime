@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}更新历史{% endblock %}
+{% block update %}<a href='/' class='fn4'></a>{% endblock %}
+{% block content %}
+<h1 class='list_h1'>更新列表</h1>
+<div class='list'>
+	{% for up in updates %}
+	<h3 class='list_h3'>{{ up.date }}</h3>
+	<pre class='list_pre'>{{ up.content }}</pre>
+	{% endfor %}
+</div>
+{% endblock %}
+{% block scrooltop %}
+<a href="#head" id="scroll_top" style="display:none">返回顶部</a>
+{% endblock %}

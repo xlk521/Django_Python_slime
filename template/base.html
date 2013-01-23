@@ -1,0 +1,58 @@
+<!DOCTYPE html public "-//w3c//dtd html 4.01 transitional//en" "http://www.w3.org/tr/html4/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" name="viewport" content="width=device-width,initial-scale=1.0"/>
+		<title>{% block title %}{% endblock %}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+		<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+		<link rel="stylesheet" type="text/css" href="/statics/css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="/statics/css/slime.css"/>
+		<script type="text/javascript" src="/statics/js/jquery-1.8.2.min.js" charset="UTF-8"></script>
+		<script type="text/javascript" src="/statics/js/slime.js" charset="UTF-8"></script>
+		<style>
+			html{overflow: scroll;}
+			.slime{position: relative;min-width: 984px}
+			.head,.content,.foot{position: relative;width: 984px;margin: 0 auto;overflow: hidden;}
+			.head{height: 80px;}
+			.content{height: auto;}
+			.foot{height: 60px;}
+			#scroll_top{background: url(/statics/img/slime.gif);}
+			.logo{ position: relative;width: 200px;background-position: bottom right;height: 80px;float: left;}
+			.fn1,.fn2,.fn3,.fn4{display: block;width: 105px;height: 35px; position: relative;float: right;margin-top: 25px;margin-right: 10px; background: url(/statics/img/slime.gif);}
+			.fn1{background-position: 0% 0%;margin-right: 0;}
+			.fn2{background-position: 0px -50px;}
+			.fn3{background-position: 0px -100px;}
+			.fn4{background-position: 0px -150px;}
+			.slime_img{position: relative;margin: 0 auto;margin-top: 10px;width: 984px;height: 445px;overflow: hidden;}
+			.button{position: relative;overflow: hidden;width: 984px;height: 60px;margin:0 auto;margin-top: 15px;}
+			.btn_left,.btn_right{width: 492px;position: relative;float: left;}
+			.b_left,.b_right{position: relative;width: 150px;height: 55px;font-size: 24px;}
+			.b_left{float: right;margin-right: 120px;}
+			.b_right{margin-left: 50px;}
+			.list_h1{position: relative;margin-top: 15px;}
+			.list{position: relative;}
+			.list_h3{position: relative;margin-top: 15px;border: 1px solid #aaa;width: 250px;text-align: center;background: rgb(228, 240, 223)}
+			.list_pre{position: relative;border: 1px solid #aaa}
+			#scroll_top{background-position: bottom right;width: 26px;height: 50px;text-indent: -999999px;display: block;position: fixed;_position: absolute;right: 10px;bottom: 100px;_bottom: "auto";cursor: pointer;}
+		</style>
+	</head>
+	<body>
+		<div class="slime">
+			<div id='head' class="head">
+				<div class='logo'>
+					<a href='/'>
+						<img class='logo' src='/statics/img/logo.jpg'/>
+					</a>
+				</div>
+				<a href='http://weibo.com/u/2622710801' class='fn1'></a>
+				<a href='http://t.qq.com/xlk521' class='fn2'></a>
+				{% block update %}{% endblock %}
+			</div>
+			<div class="content">
+				{% block content %}{% endblock %}
+			</div>
+			<div class="foot"></div>
+		</div>
+		{% block scrooltop %}{% endblock %}
+	</body>
+</html>

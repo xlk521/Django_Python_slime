@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}首页{% endblock %}
+{% block update %}<a href='/update/' class='fn3'></a>{% endblock %}
+{% block content %}
+<div class='slime_img'>
+	<img class='slime_img' src='/statics/img/slime.jpg' />
+</div>
+<div class='button'>
+	<div class='btn_left'>
+		<button class='btn btn-info b_left'>安卓下载</button>
+	</div>
+	<div class='btn_right'>
+		<button class='btn b_right disabled'>苹果下载</button>
+	</div>
+</div>
+{% endblock %}
